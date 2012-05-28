@@ -21,6 +21,7 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
@@ -153,6 +154,7 @@ public class TabPageIndicator extends HorizontalScrollView implements PageIndica
         tabView.mIndex = index;
         tabView.setFocusable(true);
         tabView.setOnClickListener(mTabClickListener);
+        tabView.setGravity(Gravity.CENTER);
         tabView.setText(text);
 
         mTabLayout.addView(tabView, new LinearLayout.LayoutParams(0, FILL_PARENT, 1));
